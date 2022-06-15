@@ -11,7 +11,7 @@
 alembic init migrations
 
 # configurar alembic
-    - abriri el alembic.ini y modificar la linea de sqlalchemy.url y dejar vacio
+    - abrir el alembic.ini y modificar la linea de sqlalchemy.url y dejar vacio
 # Abrir el env.py de la carpeta migrations
     Copiar esto antes de la funcion run_migrations_offline
     from core.config import settings
