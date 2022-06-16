@@ -33,5 +33,5 @@ Descargar el CLI de heroku
 https://devcenter.heroku.com/articles/heroku-cli
 
     1. heroku login 
-    2. heroku git:remote -a proyecto-flask-api-rest
+    2. heroku git:remote -a URL_PROYECTO
     3. git push heroku master
