@@ -27,3 +27,8 @@ alembic init migrations
 # Por ultimo ejecutar
 alembic revision --autogenerate -m "crear modelos"
 alembic upgrade heads
+
+# Desplegar en heroku
+    1. heroku login 
+    2. heroku git:remote -a proyecto-flask-api-rest
+    3. git push heroku master
