@@ -3,7 +3,7 @@ from fastapi.templating import Jinja2Templates
 # import requests
 import aiohttp
 
-router = APIRouter()
+router = APIRouter(include_in_schema=False)
 templates = Jinja2Templates(directory="app/templates")
 
 url = "http://localhost:8000"
@@ -20,7 +20,6 @@ def registration(request: Request):
 
 @router.post("/register")
 async def registration(request: Request):
-    print("entre")
     form = await request.form()
     usuario = {
         "username":form.get('username'),
