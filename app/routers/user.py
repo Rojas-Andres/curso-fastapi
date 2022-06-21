@@ -5,7 +5,6 @@ from sqlalchemy.orm import Session
 from typing import List
 from app.repository import user 
 from app.oauth import get_current_user
-
 router = APIRouter(
     prefix="/user",
     tags=["Users"]
@@ -17,7 +16,7 @@ def obtener_usuarios(db:Session = Depends(get_db),current_user: User = Depends(g
     return data
 
 @router.post('/',status_code=status.HTTP_201_CREATED)
-def crear_usuario(usuario:User,db:Session = Depends(get_db),current_user: User = Depends(get_current_user)):
+def crear_usuario(usuario:User,db:Session = Depends(get_db)):
     user.crear_usuario(usuario,db)
     return {"respuesta":"Usuario creado satisfactoriamente!!"}
 
