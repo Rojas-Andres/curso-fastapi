@@ -20,5 +20,6 @@ def verify_token(token:str,credentials_exception):
         if username is None:
             raise credentials_exception
         token_data = TokenData(username=username)
+        return True 
     except JWTError:
         raise credentials_exception
